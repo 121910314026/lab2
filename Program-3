@@ -1,23 +1,14 @@
-# Python program to find the L.C.M. of two input number
 
-# This function computes GCD 
-def compute_gcd(x, y):
-
-   while(y):
-       x, y = y, x % y
-   return x
-
-# This function computes LCM
-def compute_lcm(x, y):
-   lcm = (x*y)//compute_gcd(x,y)
-   return lcm
-
-num1 = 54
-num2 = 24 
-
-print("The L.C.M. is", compute_lcm(num1, num2))
-
+import math
+x= int(input('Enter First number:'))
+y =int(input('Enter Second number:'))
+gcd_ans = math.gcd(x,y)
+lcm_ans = x*y/ gcd_ans
+print(lcm_ans)
+print(gcd_ans)
 
 Output:
-
-The L.M.C. is 216
+Enter First number:3
+Enter Second number:5
+15.0
+1
